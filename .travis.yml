@@ -1,0 +1,24 @@
+language: java
+
+jdk: oraclejdk8
+
+notifications:
+  slack: gojava5:cYFMCiUjvusZAcWyEVwgJUCL
+  email: false
+
+addons:
+  sonarqube:
+    token:
+#      secure: qEdRhauwTJZw3NzTACP0xXKK0yh1EL7V6zPHvA91kFYlJTvibek2YSVORs1ydQUngTBa/27nuXghs4U09y/9hOshHS0Ld7TENVIZ9p+dE3XBm4TD+acQMTt663agYXGPI2dcC1JN+NyB0UfFB8qCtjXdCxigmYTRxen7AKi8Z/GdLElbRxklcLHdDNZdipW4vZ0GtyeU+jtLd+PJ4v5KiEm0ofzZX+ynkkf5Rq41c96ikMdnsRWGJ9YQzLCJz17HMx4vUUMSxvHGn4dYeYUFbIqkJNYDXiW8xbw307UTVQe6/FC4kGzyVymq1jqiSh4WoXnR15ZfHOEzbLCqeG67smbj5tc/dEJwZwLWCPD+ni7WwdFS5OsHF2hWUSkzkE1aB+FwZuNGdkHuYVgvee32UoJhla15xATiWG8F1v2zjXTrgsTqX13xg197iwdXB7+QcJlvhqtUdt7kxvnSNAt1OnI0ZCnu2RQ0g+LIiO6qDtqkdjQDoDhTqS2xX9YNHJs7IdPVFDQBN79S7X0/6L5LkHvfHRS3tTSTYc77BG4hnpVZ3rgNw8yJnQVhwCSbyurq+yQLR37BpUBTqscsq+2D3TF9QBPe4tgnZCjc5WsTL0D0oCxx3dx/7MFMh7XgVH3agJST53C6cYauneHCgln3+69r0DxvsV7kYz+LYR/yEvo=
+    github_token:
+#      secure: GnZOyh1sSE5QMogTXyKrFS6cMlqer4KgYqvHktmFN01TJ2KlMa5y0/PF6DVLReXfFJ2dBRg5X8EaWtN76PfHkkLNtp1vS7m4UEaw2Hl4KILTj8IjZvWFgaiuVBW2LGcLCKLW1CfPUL/TpocZVkdL0fujZYjcFzGot85VOjUrw91rreAo9kgQQzYy9mG/wqHIg/y5TWDfKfiqGskhUoWAh9TbIK/RzEFgjjAaliCMbwwJ8G4RSqM92jRNOB8NmZmcrbRcSuSoM3/q4cf2ZzZTxnrjNFbJfjZ7mdAjPCVxPdKKoqr85M8nR5CUSY/6rZ48R7sQ/gsXVFuqFdl/m2/h+X2MHxrZ8CwNw09Hi05Q53nU+YXBUDuahTwdQMU+nKUV4MD+o7h9hdM59Anlix392fSlYyC8Gkf+3Ry8AgdQc95sqwp0w7KHrj6x+hiVboPCJ43O6gOpsiWpmJEOBaLbJLjy7rjm5Z7SPYleP7ehHejCrxxz211l6nfiq7QHra9wFXTIvqR3NIuCq1fTVwxa5Lde4VxQTHUKGggLkzrYVnHTiGMuJ76UC1Mk64g2bsXEbl9Bq4nikgyVTPkuoWFXvZzWRs6a4y+Tth4ozdFylpFmuaW5LWEiu6wrDt/vu4sEOAfk2B7YbrRldd3E4NpqAKMFNluGp21N6Ni6iXmpnUg=
+
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.sonar
+
+script:
+- mvn clean test
+#- test jacoco:report coveralls:report
+- sonar-scanner -X
