@@ -8,6 +8,7 @@ notifications:
 
 addons:
   sonarqube:
+    organization: "alexpoliterudenko-github"
     token:
       secure: VbiVAMBsiG6eWjsMDzAHmTOW3xLa2/LgQjuOy5IF93s9BnWIlh8sHNHsQlWSqG1BEMFIR2c654DugJ3Cbz0Oq4TiXtfPfYNbLNHn42gIPpDYrmY/NKxzhpUmm19OiMgQ/LxAUeZa9kFRsIy9/bEXnPtejk/XODU31E8GfzYkpdSWqZnELirfbpiyzRdWV71MAV/968Li7MFXrLMCbnwZ+gXOQ1SsC/KLDms98nnNLRmsSe3waS12nj24KEKbgTyv+xK1EaDTEJw8eaVvxGtrgtHVsUv85a8g+pxwYyiQsDYEOpegsZyCqYTFe1tHUwqaezRlGYI0+vLYSJk3px3ugqq/wg9i4WTuZAsKCM6TiGmMI/J5cReP5rSpYLwqMigRZxWMPeG6YA6hY8/W8iBaszYvIW2XlEdeHRYBvvzVfKkbvXOdzRl1j66lxj9jIkKRDLjU/UsqUgwGb7270rsOVIjYwp64q9FSXciE2qQ+a9Df18TL59uKjCtwv2Ka5U/fKmHRjB6d6JOuEoZFTDM0tZIHqfj+/ZN9Aad9jQPrGDhFqvRnFaKZudbu0+Lk0iiEA0BvTnM2mTjv1MEVFv2w8/fH5iaBRVgSZp++GrHhmh0pNmodQ+dUW8w4Xh749NOEYTo3qcDdQCzpbMaJ+z+aGhfZlbh7c+QbUp3cuJbS88A=
     github_token:
