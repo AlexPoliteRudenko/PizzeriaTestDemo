@@ -21,7 +21,6 @@ public class Loader {
                 session.update(pizza);
                 System.in.read();
                 System.out.println(session.get(Pizza.class, 1));
-                System.out.println();
             }
         }
     }
